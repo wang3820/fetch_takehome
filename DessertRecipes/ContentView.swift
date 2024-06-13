@@ -8,14 +8,30 @@
 import SwiftUI
 
 struct ContentView: View {
+    @StateObject var mealsViewModel = MealsViewModel()
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        NavigationStack {
+            List{
+                ForEach (mealsViewModel.meals) {
+                    meal in
+                    NavigationLink{
+                        RecipeView(idMeal: meal.idMeal)
+                    } label: {
+                        MealRow(meal: meal)
+                    }
+                }
+                
+            }
+            .onAppear {
+                if mealsViewModel.meals.isEmpty {
+                    Task {
+                        await mealsViewModel.fetchData(url: "https://themealdb.com/api/json/v1/1/filter.php?c=Dessert")
+                    }
+                }
+            }
+            .navigationTitle("Menu")
+            .listStyle(.grouped)
         }
-        .padding()
     }
 }
 
