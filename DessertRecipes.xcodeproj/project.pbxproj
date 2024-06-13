@@ -21,6 +21,7 @@
 		7113174C2C1A4E6F008EB427 /* MealsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7113174B2C1A4E6F008EB427 /* MealsViewModel.swift */; };
 		7113174E2C1A6515008EB427 /* MealRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7113174D2C1A6515008EB427 /* MealRow.swift */; };
 		711317502C1A6F60008EB427 /* RecipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7113174F2C1A6F60008EB427 /* RecipeView.swift */; };
+		7154EBFF2C1B2B9F00888B48 /* MealRowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7154EBFE2C1B2B9F00888B48 /* MealRowViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,7 @@
 		7113174B2C1A4E6F008EB427 /* MealsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealsViewModel.swift; sourceTree = "<group>"; };
 		7113174D2C1A6515008EB427 /* MealRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealRow.swift; sourceTree = "<group>"; };
 		7113174F2C1A6F60008EB427 /* RecipeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeView.swift; sourceTree = "<group>"; };
+		7154EBFE2C1B2B9F00888B48 /* MealRowViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealRowViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +121,7 @@
 				7113174B2C1A4E6F008EB427 /* MealsViewModel.swift */,
 				7113174D2C1A6515008EB427 /* MealRow.swift */,
 				7113174F2C1A6F60008EB427 /* RecipeView.swift */,
+				7154EBFE2C1B2B9F00888B48 /* MealRowViewModel.swift */,
 			);
 			path = DessertRecipes;
 			sourceTree = "<group>";
@@ -286,6 +289,7 @@
 				711317162C1A1488008EB427 /* DessertRecipesApp.swift in Sources */,
 				711317442C1A382E008EB427 /* Recipe.swift in Sources */,
 				7113174C2C1A4E6F008EB427 /* MealsViewModel.swift in Sources */,
+				7154EBFF2C1B2B9F00888B48 /* MealRowViewModel.swift in Sources */,
 				7113174E2C1A6515008EB427 /* MealRow.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

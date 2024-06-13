@@ -11,24 +11,24 @@ struct MealResponse: Codable {
     let meals: [Meal]
 }
 
+extension String {
+    func emptyAsNil() -> String? {
+        self.isEmpty ? nil : self
+    }
+}
+
 struct Meal: Codable, Identifiable {
     var id = UUID()
     let idMeal: String
-    let strMeal: String
-    let strMealThumb: String
-    
-    enum Codingkeys: String, CodingKey {
-        case id = "idMeal"
-        case strMeal
-        case strMealThumb
-    }
+    let strMeal: String?
+    let strMealThumb: String?
     
     init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)
         
         idMeal = try values.decode(String.self, forKey: .idMeal)
-        strMeal = try values.decode(String.self, forKey: .strMeal)
-        strMealThumb = try values.decode(String.self, forKey: .strMealThumb)
+        strMeal = try values.decodeIfPresent(String.self, forKey: .strMeal)?.emptyAsNil()
+        strMealThumb = try values.decodeIfPresent(String.self, forKey: .strMealThumb)?.emptyAsNil()
 
     }
 }

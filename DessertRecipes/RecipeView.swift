@@ -13,7 +13,7 @@ struct RecipeView: View {
     
     var body: some View {
         VStack {
-            AsyncImage(url: URL(string: recipeViewModel.recipe?.strMealThumb ?? "")) {
+            AsyncImage(url: URL(string: recipeViewModel.getMealThumb())) {
                 phase in
                 switch (phase) {
                     
@@ -46,12 +46,12 @@ struct RecipeView: View {
             .clipShape(Circle())
             .frame(maxWidth: 200, maxHeight: 200)
             
-            Text(recipeViewModel.recipe?.strMeal ?? "")
+            Text(recipeViewModel.getMealName())
                 .bold()
                 .font(.title)
             
             ScrollView {
-                Text(recipeViewModel.recipe?.strInstructions ?? "")
+                Text(recipeViewModel.getMealInstructions())
                     .padding()
             }
             

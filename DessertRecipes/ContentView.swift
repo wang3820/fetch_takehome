@@ -14,10 +14,12 @@ struct ContentView: View {
             List{
                 ForEach (mealsViewModel.meals) {
                     meal in
-                    NavigationLink{
-                        RecipeView(idMeal: meal.idMeal)
-                    } label: {
-                        MealRow(meal: meal)
+                    if mealsViewModel.mealIsValid(meal: meal) {
+                        NavigationLink{
+                            RecipeView(idMeal: meal.idMeal)
+                        } label: {
+                            MealRow(meal: meal)
+                        }
                     }
                 }
                 

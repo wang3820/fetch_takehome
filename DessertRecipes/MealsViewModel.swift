@@ -17,4 +17,13 @@ import Foundation
         }
         meals = fetchedMeals.meals
     }
+    
+    func mealIsValid(meal: Meal) -> Bool {
+        guard meal.strMeal != nil else {
+            return false
+        }
+        
+        return true
+        
+    }
 }

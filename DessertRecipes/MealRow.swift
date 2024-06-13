@@ -9,9 +9,16 @@ import SwiftUI
 
 struct MealRow: View {
     let meal: Meal
+    @StateObject var mealRowViewModel: MealRowViewModel
+    
+    init(meal: Meal) {
+        self.meal = meal
+        _mealRowViewModel = StateObject(wrappedValue: MealRowViewModel(meal: meal))
+    }
+    
     var body: some View {
         HStack {
-            AsyncImage(url: URL(string: meal.strMealThumb)) {
+            AsyncImage(url: URL(string: mealRowViewModel.getMealThumb())) {
                 phase in
                 switch (phase) {
                     
@@ -45,7 +52,7 @@ struct MealRow: View {
             .clipShape(RoundedRectangle(cornerSize: /*@START_MENU_TOKEN@*/CGSize(width: 20, height: 10)/*@END_MENU_TOKEN@*/))
             
             
-            Text(meal.strMeal)
+            Text(mealRowViewModel.getMealName())
         }
     }
 }

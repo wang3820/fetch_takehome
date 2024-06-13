@@ -27,4 +27,28 @@ import Foundation
     
         return items
     }
+    
+    func getMealThumb() -> String {
+        guard let mealThumb = recipe?.strMealThumb else {
+            return ""
+        }
+        
+        return mealThumb
+    }
+    
+    func getMealName() -> String {
+        guard let mealName = recipe?.strMeal else {
+            return "Unknown"
+        }
+        
+        return mealName
+    }
+    
+    func getMealInstructions() -> String {
+        guard let mealInstructions = recipe?.strInstructions else {
+            return "Instructions Unavailable"
+        }
+        
+        return mealInstructions
+    }
 }

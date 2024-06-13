@@ -26,9 +26,9 @@ struct IngridientItem: Identifiable {
 
 struct Recipe: Codable {
     let idMeal: String
-    let strMeal: String
-    let strInstructions: String
-    let strMealThumb: String
+    let strMeal: String?
+    let strInstructions: String?
+    let strMealThumb: String?
     let strIngredients: [String]
     let strMeasures: [String]
     
@@ -38,9 +38,9 @@ struct Recipe: Codable {
         let values = try decoder.container(keyedBy: CodingKeys.self)
         
         idMeal = try values.decode(String.self, forKey: .idMeal)
-        strMeal = try values.decode(String.self, forKey: .strMeal)
-        strInstructions = try values.decode(String.self, forKey: .strInstructions)
-        strMealThumb = try values.decode(String.self, forKey: .strMealThumb)
+        strMeal = try values.decodeIfPresent(String.self, forKey: .strMeal)?.emptyAsNil()
+        strInstructions = try values.decodeIfPresent(String.self, forKey: .strInstructions)?.emptyAsNil()
+        strMealThumb = try values.decodeIfPresent(String.self, forKey: .strMealThumb)?.emptyAsNil()
     
         let listValues = try decoder.container(keyedBy: CustomCodingKeys.self)
         for i in 1... {
