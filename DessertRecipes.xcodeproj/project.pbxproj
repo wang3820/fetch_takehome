@@ -60,6 +60,7 @@
 		7113174D2C1A6515008EB427 /* MealRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealRow.swift; sourceTree = "<group>"; };
 		7113174F2C1A6F60008EB427 /* RecipeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeView.swift; sourceTree = "<group>"; };
 		7154EBFE2C1B2B9F00888B48 /* MealRowViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealRowViewModel.swift; sourceTree = "<group>"; };
+		7154EC002C1B3B6F00888B48 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +91,7 @@
 		711317092C1A1488008EB427 = {
 			isa = PBXGroup;
 			children = (
+				7154EC002C1B3B6F00888B48 /* README.md */,
 				711317142C1A1488008EB427 /* DessertRecipes */,
 				711317252C1A1489008EB427 /* DessertRecipesTests */,
 				7113172F2C1A1489008EB427 /* DessertRecipesUITests */,
