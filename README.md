@@ -45,6 +45,9 @@ The objective of this project is to build a native iOS app that can
 [Menu](https://i.ibb.co/LZxp3CG/IMG-3160.png)\
 [Detail](https://i.ibb.co/7KqnsDx/IMG-3161.png)
 
+## Demo
+Please check out this [youtube video](https://youtube.com/shorts/rmP65dJt16s?feature=share)
+
 ## Area of Improvements
 1. Testing
 2. Adding logo to the app
