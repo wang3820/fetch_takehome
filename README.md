@@ -42,6 +42,8 @@ The objective of this project is to build a native iOS app that can
 3. Included images for better look
 
 ## Results
+[Menu](https://i.ibb.co/LZxp3CG/IMG-3160.png)\
+[Detail](https://i.ibb.co/7KqnsDx/IMG-3161.png)
 
 ## Area of Improvements
 1. Testing
